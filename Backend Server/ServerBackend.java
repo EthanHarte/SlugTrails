@@ -32,28 +32,10 @@ public class ServerBackend
 
 		while(true)
 		{	
-			Scanner consoleIn = new Scanner(System.in);
-			//LocalServerCommand lsd = new LocalServerCommand(consoleIn);
-			//Thread input = new Thread(lsd);
-			ServerRequest request = new ServerRequest(serverSocket);
+			ServerRequest request = new ServerRequest(serverSocket.accept());
+			System.out.println("Connection established.");
 			Thread thread = new Thread(request);
 			thread.start();
-
-			String command = consoleIn.nextLine();
-			if(command.equals("q"))
-			{
-				try{
-					FileOutputStream fos = new FileOutputStream(dbFile);
-					BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
-					for (Location l : db.values())
-						bw.write(l.toString());
- 
-					bw.close();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-				System.exit(1);
-			}
 		}
 	}
 }
@@ -91,37 +73,21 @@ class Location
 	}
 }
 
-final class LocalServerCommand implements Runnable {
-	Scanner in;
-	public LocalServerCommand(Scanner in){
-		this.in = in;
-	}
-
-	public void run(){
-		String command = in.nextLine();
-		if(command.equals("q")) 
-			System.exit(1);
-	}
-}
-
 final class ServerRequest implements Runnable 
 {
 	final static String CRLF = "\r\n";
-	ServerSocket sSocket;
 	Socket socket;
 	Location gpsLoc;
 	
-	public ServerRequest(ServerSocket sSocket) throws Exception
+	public ServerRequest(Socket socket) throws Exception
 	{
-		this.sSocket = sSocket;
+		this.socket = socket;
 	}
 	
 	public void run()
 	{
 		try
 		{
-			this.socket = sSocket.accept();
-			System.out.println("Connection established.");
 			processRequest();
 		} catch(Exception e){
 			e.printStackTrace();
@@ -158,6 +124,8 @@ final class ServerRequest implements Runnable
 		// Read information from socket (User command)
 		System.out.printf("Reading Information:\n");
 		inStr = input.readLine();
+
+		System.out.printf("%s", inStr);
 
 		// Splitting and loop borrowed from Oracle
      		String[] result = inStr.split("_");
