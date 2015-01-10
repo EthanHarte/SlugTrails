@@ -24,6 +24,9 @@ public class ServerBackend
 			String[] strs;
 			while((inStr = buffer.readLine()) != null){
 				strs = inStr.split("_");
+				Location l = new Location();
+				l.fillLoc(strs);
+				db.put(Integer.parseInt(strs[0]), l);
 			}
  			buffer.close();
 		} catch(Exception e){
@@ -63,7 +66,12 @@ class Location
 	public int getId(){ return this.id; }
 
 	public void fillLoc(String[] str){
-		
+		this.id = Integer.parseInt(str[0]);
+		this.name = str[1];
+		this.time = Integer.parseInt(str[2]);
+		this.gps1 = Float.parseFloat(str[3]);
+		this.gps2 = Float.parseFloat(str[4]);
+		this.description = str[5];
 	}
 
 	public String toString(){
@@ -115,9 +123,6 @@ final class ServerRequest implements Runnable
 		// Debug information. 
 		System.out.println("Connected to " + this.socket.getRemoteSocketAddress() + "\n");
 
-		// Initialize output stream.
-		output = new PrintWriter(socket.getOutputStream());
-
 		// Instantiate BufferedReader as a listener stream for incoming server data.
 		input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 		
@@ -145,6 +150,10 @@ final class ServerRequest implements Runnable
 			throw new Exception("Error: command not supported. [" + result[0] + "]");
 		}
 
+
+		// Initialize output stream.
+		output = new PrintWriter(socket.getOutputStream());
+
 		switch(commandState){
 			// Getall command "getall_[GPS1]_[GPS2]_[RADIUS]"
 			case 0:
@@ -157,9 +166,12 @@ final class ServerRequest implements Runnable
 			radius = Float.parseFloat(result[3]);
 
 			System.out.printf("Sending data now:\n");
-			for(Location l : ServerBackend.db.values()){
-				System.out.printf("Value sent to client: %s\n", l.toString());
-				output.print(l.toString());
+			Collection<Location> l = ServerBackend.db.values();
+			System.out.printf("HashtableSize:%d Size:%d IsEmpty:%b",ServerBackend.db.size(), l.size(), l.isEmpty());
+			for(Iterator<Location> i = l.iterator(); i.hasNext();){
+				String str = i.next().toString();
+				System.out.printf("Value sent to client: %s\n", str);
+				output.println(str);
 				output.flush();
 			}
 			break;
@@ -207,14 +219,16 @@ final class ServerRequest implements Runnable
 		}	
 
 		//System.out.printf("Sending data now:\n");
-		output.print("\0");
-		output.flush();
+		//output.print("\0");
+		//output.flush();
 
 		//BufferedReader in = new BufferedReader(new InputStreamReader(this.socket.getInputStream()));
         	//DataOutputStream out = new DataOutputStream(this.socket.getOutputStream());
         	//out.writeUTF("Thank you for connecting to " + this.socket.getLocalSocketAddress() + 
 			//"\nGoodbye!");
 		System.out.printf("Server connection closed.\n");
+		input.close();
+		output.close();
 		this.socket.close();
 	}
 }
