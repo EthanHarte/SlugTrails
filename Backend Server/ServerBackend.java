@@ -125,7 +125,7 @@ final class ServerRequest implements Runnable
 		System.out.printf("Reading Information:\n");
 		inStr = input.readLine();
 
-		System.out.printf("%s", inStr);
+		System.out.printf("Buffer from client: %s\n", inStr);
 
 		// Splitting and loop borrowed from Oracle
      		String[] result = inStr.split("_");
@@ -145,7 +145,6 @@ final class ServerRequest implements Runnable
 			throw new Exception("Error: command not supported. [" + result[0] + "]");
 		}
 
-
 		switch(commandState){
 			// Getall command "getall_[GPS1]_[GPS2]_[RADIUS]"
 			case 0:
@@ -159,7 +158,7 @@ final class ServerRequest implements Runnable
 
 			System.out.printf("Sending data now:\n");
 			for(Location l : ServerBackend.db.values()){
-				System.out.printf("Value sent to client: %d\n", l.toString());
+				System.out.printf("Value sent to client: %s\n", l.toString());
 				output.print(l.toString());
 				output.flush();
 			}
@@ -170,9 +169,20 @@ final class ServerRequest implements Runnable
 			if(result.length < 2){
 				throw new Exception("Invalid number of arguments.");
 			}
+
+			Set<Integer> locs = ServerBackend.db.keySet();
+
 			for(int x = 1; x < result.length; x++){
-				idList.add(Integer.parseInt(result[x]));
+				Integer i = Integer.parseInt(result[x]);
+				if(locs.contains(i)){
+					locs.remove(i);
+				}
+				else{
+					System.err.printf("Warning: Server does not contain ID=%d\n", x);
+				}
 			}
+
+			//for()
 			break;
 
 			// Post command "post_[ID]_[NAME]_[TIME]_[GPS1]_[GPS2]_[DESCRIPTION]"
@@ -189,9 +199,9 @@ final class ServerRequest implements Runnable
 
 		}
 
-		System.out.printf("GetAll Data: Command: %d, GPS1: %f, GPS2: %f, Radius: %f\n", 
-			commandState, gpsLoc[0], gpsLoc[1], radius);
-		System.out.printf("Update Data: Command: %d", commandState);	
+		//System.out.printf("GetAll Data: Command: %d, GPS1: %f, GPS2: %f, Radius: %f\n", 
+			//commandState, gpsLoc[0], gpsLoc[1], radius);
+		//System.out.printf("Update Data: Command: %d", commandState);	
 		for(Integer i : idList){
 			System.out.printf("ID:%d\n", i);
 		}	
