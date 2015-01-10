@@ -3,6 +3,6 @@ Ethan Harte
 Andrew Lee
 Ian Perrigo
 Harrison Chen
-Brent ***
+Brent Hickey
 # SlugTrails
 Wildlife tracking application
