@@ -57,15 +57,15 @@ final class ServerRequest implements Runnable
 		// Instantiate BufferedReader as a listener stream for incoming server data.
 		input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-		//output.println("You have connected to the server; have a nice ");
-		//output.flush();
-
 		inStr = input.readLine();
 
 		// Borrowed from Oracle
      		String[] result = inStr.split(",");
      		for (int x=0; x<result.length; x++)
          		System.out.println(result[x]);
+
+		output.println("You have connected to the server; go fuck yourself");
+		output.flush();
 
 		//BufferedReader in = new BufferedReader(new InputStreamReader(this.socket.getInputStream()));
         	//DataOutputStream out = new DataOutputStream(this.socket.getOutputStream());
