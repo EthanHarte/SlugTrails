@@ -3,21 +3,57 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import java.util.ArrayList;
+import java.util.Hashtable;
 
 
 public class ServerBackend 
 {
+	public static Hashtable<Integer, Location> db = 
+		new Hashtable<Integer, Location>();
+	private static File dbFile;
+
 	public static void main(String[] args) throws Exception 
 	{
 		int port = 25565;
 		ServerSocket serverSocket = new ServerSocket(port);
 		System.out.println("Awaiting Connection.");
+		try{
+			dbFile = new File("db.data");
+			BufferedReader buffer = new BufferedReader(new FileReader("db.data"));
+			String inStr;
+			String[] strs;
+			while((inStr = buffer.readLine()) != null){
+				strs = inStr.split("_");
+			}
+ 			buffer.close();
+		} catch(Exception e){
+			e.printStackTrace();
+		}
+
 		while(true)
-		{
-			ServerRequest request = new ServerRequest(serverSocket.accept());
-			System.out.println("Connection established.");
+		{	
+			Scanner consoleIn = new Scanner(System.in);
+			//LocalServerCommand lsd = new LocalServerCommand(consoleIn);
+			//Thread input = new Thread(lsd);
+			ServerRequest request = new ServerRequest(serverSocket);
 			Thread thread = new Thread(request);
 			thread.start();
+
+			String command = consoleIn.nextLine();
+			if(command.equals("q"))
+			{
+				try{
+					FileOutputStream fos = new FileOutputStream(dbFile);
+					BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
+					for (Location l : db.values())
+						bw.write(l.toString());
+ 
+					bw.close();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				System.exit(1);
+			}
 		}
 	}
 }
@@ -31,6 +67,8 @@ class Location
 	float gps2;
 	String description;
 
+	public Location(){}
+
 	public Location(int id, String name, int time, float gps1, float gps2, String description){
 		this.id = id;
 		this.name = name;
@@ -39,23 +77,51 @@ class Location
 		this.gps2 = gps2;
 		this.description = description;
 	}
+	
+	public int getId(){ return this.id; }
+
+	public void fillLoc(String[] str){
+		
+	}
+
+	public String toString(){
+		String ret = String.format("%d_%s_%d_%f_%f_%s\0", this.id, this.name, 
+			this.time, this.gps1, this.gps2, this.description);
+		return ret;
+	}
+}
+
+final class LocalServerCommand implements Runnable {
+	Scanner in;
+	public LocalServerCommand(Scanner in){
+		this.in = in;
+	}
+
+	public void run(){
+		String command = in.nextLine();
+		if(command.equals("q")) 
+			System.exit(1);
+	}
 }
 
 final class ServerRequest implements Runnable 
 {
 	final static String CRLF = "\r\n";
+	ServerSocket sSocket;
 	Socket socket;
 	Location gpsLoc;
 	
-	public ServerRequest(Socket socket) throws Exception
+	public ServerRequest(ServerSocket sSocket) throws Exception
 	{
-		this.socket = socket;
+		this.sSocket = sSocket;
 	}
 	
 	public void run()
 	{
 		try
 		{
+			this.socket = sSocket.accept();
+			System.out.println("Connection established.");
 			processRequest();
 		} catch(Exception e){
 			e.printStackTrace();
@@ -122,6 +188,13 @@ final class ServerRequest implements Runnable
 			gpsLoc[0] = Float.parseFloat(result[1]);
 			gpsLoc[1] = Float.parseFloat(result[2]);
 			radius = Float.parseFloat(result[3]);
+
+			System.out.printf("Sending data now:\n");
+			for(Location l : ServerBackend.db.values()){
+				System.out.printf("Value sent to client: %d\n", l.toString());
+				output.print(l.toString());
+				output.flush();
+			}
 			break;
 
 			// Update command "update_[ID LIST]"
@@ -139,9 +212,11 @@ final class ServerRequest implements Runnable
 			if(result.length < 6){
 				throw new Exception("Invalid number of arguments.");
 			}
-			//gpsLoc[0] = Float.parseFloat(result[1]);
-			//gpsLoc[1] = Float.parseFloat(result[2]);
-			//radius = Float.parseFloat(result[3]);
+			int id = (int)(Integer.parseInt(result[1]));
+			Location newLoc = new Location(id, result[2], Integer.parseInt(result[3]), 
+				Float.parseFloat(result[4]), Float.parseFloat(result[5]), result[6]);
+			ServerBackend.db.put(id, newLoc);
+			System.out.printf("Object Added to Database: %s\n", ServerBackend.db.get(id).toString());
 			break;
 
 		}
@@ -153,7 +228,7 @@ final class ServerRequest implements Runnable
 			System.out.printf("ID:%d\n", i);
 		}	
 
-		System.out.printf("Sending data now:\n");
+		//System.out.printf("Sending data now:\n");
 		output.print("\0");
 		output.flush();
 
