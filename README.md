@@ -1,0 +1,2 @@
+# SlugTrails
+Wildlife tracking application
