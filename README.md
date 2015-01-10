@@ -1,8 +1,8 @@
 # Authors
-# Ian Perrigo
-# Ethan Harte
-# Andrew Lee
-# Harrison Chen
-# Brent ***
+Ethan Harte
+Andrew Lee
+Ian Perrigo
+Harrison Chen
+Brent ***
 # SlugTrails
 Wildlife tracking application
