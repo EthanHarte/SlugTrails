@@ -4,6 +4,8 @@ import java.net.*;
 import java.util.*;
 import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class ServerBackend 
@@ -11,12 +13,16 @@ public class ServerBackend
 	public static Hashtable<Integer, Location> db = 
 		new Hashtable<Integer, Location>();
 	private static File dbFile;
+	static Timer timer;
+
 
 	public static void main(String[] args) throws Exception 
 	{
 		int port = 25565;
 		ServerSocket serverSocket = new ServerSocket(port);
 		System.out.println("Awaiting Connection.");
+		timer = new Timer();
+		timer.schedule(new UpdateDBTime(), 5000);
 		try{
 			dbFile = new File("db.data");
 			BufferedReader buffer = new BufferedReader(new FileReader("db.data"));
@@ -43,6 +49,18 @@ public class ServerBackend
 	}
 }
 
+class UpdateDBTime extends TimerTask {
+	public void run() {
+		System.out.println("Update Times");
+		Collection<Location> l = ServerBackend.db.values();
+		for(Iterator<Location> i = l.iterator(); i.hasNext();){
+			i.next().incrementTime();
+		}
+		//ServerBackend.timer.cancel();
+		ServerBackend.timer.schedule(new UpdateDBTime(), 60000);
+	}
+}
+
 class Location
 {
 	int id;
@@ -64,6 +82,10 @@ class Location
 	}
 	
 	public int getId(){ return this.id; }
+
+	public void incrementTime(){
+		this.time++;
+	}
 
 	public void fillLoc(String[] str){
 		this.id = Integer.parseInt(str[0]);
@@ -208,7 +230,6 @@ final class ServerRequest implements Runnable
 			ServerBackend.db.put(id, newLoc);
 			System.out.printf("Object Added to Database: %s\n", ServerBackend.db.get(id).toString());
 			break;
-
 		}
 
 		//System.out.printf("GetAll Data: Command: %d, GPS1: %f, GPS2: %f, Radius: %f\n", 
