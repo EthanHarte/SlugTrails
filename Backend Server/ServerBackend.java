@@ -167,7 +167,7 @@ final class ServerRequest implements Runnable
 
 			System.out.printf("Sending data now:\n");
 			Collection<Location> l = ServerBackend.db.values();
-			System.out.printf("HashtableSize:%d Size:%d IsEmpty:%b",ServerBackend.db.size(), l.size(), l.isEmpty());
+			//System.out.printf("HashtableSize:%d Size:%d IsEmpty:%b",ServerBackend.db.size(), l.size(), l.isEmpty());
 			for(Iterator<Location> i = l.iterator(); i.hasNext();){
 				String str = i.next().toString();
 				System.out.printf("Value sent to client: %s\n", str);
@@ -214,9 +214,9 @@ final class ServerRequest implements Runnable
 		//System.out.printf("GetAll Data: Command: %d, GPS1: %f, GPS2: %f, Radius: %f\n", 
 			//commandState, gpsLoc[0], gpsLoc[1], radius);
 		//System.out.printf("Update Data: Command: %d", commandState);	
-		for(Integer i : idList){
+		/*for(Integer i : idList){
 			System.out.printf("ID:%d\n", i);
-		}	
+		}*/
 
 		//System.out.printf("Sending data now:\n");
 		//output.print("\0");
