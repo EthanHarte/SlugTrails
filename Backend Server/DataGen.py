@@ -10,11 +10,11 @@ count = 0;
 output = cStringIO.StringIO()
 
 for i in range(10):
-	for j in range(random.randrange(2,18,1)):
+	for j in range(random.randrange(1,8,1)):
 		count = count + 1
 		time = random.randrange(0, 360, 1)
-		ran1 = (random.randrange(-6500, 50000, 1))*.00001
-		ran2 = (random.randrange(-19000, 90000, 1))*.00001
+		ran1 = (random.randrange(-200, 800, 1))*.00001
+		ran2 = (random.randrange(-200, 800, 1))*.00001
 		x = (37.0000+ran1)
 		y = (-122.0600+ran2)
 		Data = str(count)+"_"+animals[i]+"_"+str(time)+"_"+str(x)+"_"+str(y)+"_"+discritp[i]
