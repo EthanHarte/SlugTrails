@@ -17,7 +17,7 @@ for i in range(10):
 		ran2 = (random.randrange(-20000, 20000, 1))*.0001
 		x = (37.0000+ran1)
 		y = (-122.0600+ran2)
-		Data = "post_"+str(count)+"_"+animals[i]+"_"+str(time)+"_"+str(x)+"_"+str(y)+"_"+discritp[i]
+		Data = str(count)+"_"+animals[i]+"_"+str(time)+"_"+str(x)+"_"+str(y)+"_"+discritp[i]
 		fo.write(Data);	
 		fo.write("\r\n");
 
