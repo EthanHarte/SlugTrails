@@ -14,7 +14,7 @@ in a map view or in a list view.
    selects one of the list items, more details are shown.
 
 ####Authors/Credits
-
+-----
 Developed by Ian Perrigo, Ethan Harte, Andrew Lee, Harrison Chen, Brent Hickey.
 Original concept at \#HackUCSC2015. (January 2015)
 
