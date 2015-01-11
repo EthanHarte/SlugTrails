@@ -1,7 +1,7 @@
 Slug Trails
 ======
 
-Link [here](http://challengepost.com/software/SlugTrails)!
+Challenge Post Link [here](http://challengepost.com/software/SlugTrails)!
 
 Slug Trails is an app for both iPhone and Android that uses the help from the community to
 catalog and track wildlife species. When the user sees an wild animal that they would like 
@@ -12,6 +12,8 @@ in a map view or in a list view.
    can click on these markers to display more information.
  * In the list view, the user sees a list of all tagged animals shown by type. When the user
    selects one of the list items, more details are shown.
+
+####Authors/Credits
 
 Developed by Ian Perrigo, Ethan Harte, Andrew Lee, Harrison Chen, Brent Hickey.
 Original concept at \#HackUCSC2015. (January 2015)
