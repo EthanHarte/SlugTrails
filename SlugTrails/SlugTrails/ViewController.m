@@ -19,13 +19,18 @@
 
 
 #import "ViewController.h"
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+{
+    GMSMapView *mapView_;
+    CLLocationManager *locManager_;
 
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -53,13 +58,17 @@
     if([self.Animal.text length]>0 && [self.Comment.text length]>0){
     
         
-        
+    mapView_.myLocationEnabled = YES;
+    self.view = mapView_;
+    NSLog(@"user:%@",mapView_.myLocation);
     NSString *chosen=[self.Animal.text stringByAppendingString:@"\r"];
     NSString *said=self.Comment.text;
     ///////////
     
-    NSString * latitude= [NSString stringWithFormat:@"%f",33.3];
-    NSString * longitude = [NSString stringWithFormat:@"%f",50.0];
+        
+    
+    NSString * latitude= [NSString stringWithFormat:@"%f",37.000078];
+    NSString * longitude = [NSString stringWithFormat:@"%f",-122.053825];
     
     
     int r = arc4random_uniform(1000000);
@@ -89,7 +98,7 @@
     //NSString* str = [[[@"post_9_" stringByAppendingString:said ] stringByAppendingString:@"_3_3.8_5.2_" ] stringByAppendingString:chosen];
     
     
-    NSLog(@"%@",str);
+    NSLog(@"---------------------%@",str);
     
     NSData* data = [str dataUsingEncoding:NSUTF8StringEncoding];
     

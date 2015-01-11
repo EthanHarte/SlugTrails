@@ -132,19 +132,6 @@
         marker.title = name[i];
         marker.snippet = description[i];
         marker.map = mapView_;
-    
-        
-//        marker.position = CLLocationCoordinate2DMake(lat, lon);
-//        marker.title=toLocationFromResultVC; marker.snippet=@"Destination";
-//        marker.map = mapView_;
-        
-//        GMSMarker *marker2 = [[GMSMarker alloc] init];
-//        marker2.position=CLLocationCoordinate2DMake(fromLatitudeDouble, fromLongitudeDouble);
-//        marker2.title=fromLocationFromResultVC; marker.snippet=@"Source";
-//        marker2.map = mapView_;
-//        
-        
-        
     }
     _array = latitude;
     _Subtext = longitude;
