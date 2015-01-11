@@ -8,9 +8,9 @@ catalog and track wildlife species. When the user sees an wild animal that they 
 to tag, all the user would have to do is enter the type of animal they saw and an optional 
 discription of the animal. After taging the animal the user has the option to view all tags 
 in a map view or in a list view. 
-  -In the map view there are markers for each time someone has 
+  *In the map view there are markers for each time someone has 
    tagged an animal. The user can click on these markers to display more information.
-  -In the list view, the user sees a list of all tagged animals shown by type. When the user
+  *In the list view, the user sees a list of all tagged animals shown by type. When the user
    selects one of the list items, more details are shown.
 
 Developed by Ian Perrigo, Ethan Harte, Andrew Lee, Harrison Chen, Brent Hickey.
