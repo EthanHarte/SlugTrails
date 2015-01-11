@@ -13,7 +13,7 @@ for i in range(10):
 	for j in range(random.randrange(2,18,1)):
 		count = count + 1
 		time = random.randrange(0, 360, 1)
-		ran1 = (random.randrange(-20000, 20000, 1))*.00001
+		ran1 = (random.randrange(-8000, 20000, 1))*.00001
 		ran2 = (random.randrange(-20000, 20000, 1))*.00001
 		x = (37.0000+ran1)
 		y = (-122.0600+ran2)
