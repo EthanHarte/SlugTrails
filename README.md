@@ -5,7 +5,7 @@ Challenge Post Link [here](http://challengepost.com/software/SlugTrails)!
 
 ####Description
 Slug Trails is an app for both iPhone and Android that uses the help from the community to
-catalog and track wildlife species. When the user sees an wild animal that they would like 
+catalog and track wildlife species. When the user sees a wild animal that they would like 
 to tag, all the user would have to do is enter the type of animal they saw and an optional 
 discription of the animal. After taging the animal the user has the option to view all tags 
 in a map view or in a list view. 
