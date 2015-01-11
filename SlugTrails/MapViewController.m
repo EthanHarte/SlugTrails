@@ -21,15 +21,22 @@
 
 @end
 
-@implementation MapViewController{
+@implementation MapViewController 
+{
     GMSMapView *mapView_;
+    CLLocationManager *locManager_;
 }
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    locManager_ = [[CLLocationManager alloc]init];
+    locManager_.delegate = self;
+    if ([locManager_ respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [locManager_ requestWhenInUseAuthorization];
+    }
+    [locManager_ startUpdatingLocation];
     
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
@@ -44,18 +51,26 @@
     GMSMarker *marker = [[GMSMarker alloc] init];
     //CLLocationCoordinate2D myLocation = self.mapView_.myLocation.coordinate;
     //marker.position = CLLocationCoordinate2DMake();
-    //marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
-    marker.position = CLLocationCoordinate2DMake(mapView_.myLocation.coordinate.latitude,mapView_.myLocation.coordinate.longitude);
+    marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
+    //marker.position = CLLocationCoordinate2DMake(mapView_.myLocation.coordinate.la);
     marker.title = @"Sydney";
     marker.snippet = @"Australia";
     marker.map = mapView_;
     
-    
-    
-    
-    
+//    locManager_ = [[CLLocationManager alloc] init];
+//    locManager_.delegate = self;
+//    [locManager_ startUpdatingLocation];
 }
 
+// Implementation of CLLocationManagerDelegate method to receive the GPS current location update
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    // Examine the data in locations which should pass you information about lat/long
+    NSLog(@"%@", locations);
+    NSLog(@"User's location: %@", mapView_.myLocation);
+    
+    // Update the map and drop pins based on lat/long
+}
 
 
 - (void)didReceiveMemoryWarning {

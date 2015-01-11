@@ -29,7 +29,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+    //
+    //// Receiving Data frome database
+    //
     FastSocket *clients = [[FastSocket alloc] initWithHost:@"hackucsc2015.no-ip.info" andPort:@"25565"];
     [clients connect];
 
@@ -38,27 +40,22 @@
     
     long count = [clients sendBytes:[data bytes] count:[data length]];
     
-    long expectedLength=64;
-    char bytes[expectedLength];
-    NSString *received=@"";
+    long expectedLength=64000;
     
-    //while (![received isEqual:@"\0"]) {
+
+    NSString *received=@"";
+    char bytes[expectedLength];
+    //while (![received isEqual:NULL]) {
+        
     received = @"";
-    [clients receiveBytes:bytes count:expectedLength];
-    //NSLog(@"%s", bytes);
+      [clients receiveBytes:bytes limit:expectedLength];
+       //[clients buffer:bytes size:expectedLength];
+    NSLog(@"%s", bytes);
     
     received = [[NSString alloc] initWithBytes:bytes length:strlen(bytes) encoding:NSUTF8StringEncoding];
-    NSLog(@"%@",received);
+    //NSLog(@"%@",received);
     
-    ///////////
-
-    
-    
-    //entered=
-    _array = [[NSArray alloc] initWithObjects:@"LOL", @"WE DAH HACKERZ", @"NO Sleep", @"HACKALLNITE", nil];
-    _Subtext = [[NSArray alloc] initWithObjects:@"This is LOL", @"This is WEDAH", @"Fuck Sleep", @"Nite", nil];
-    
-    
+    }
     
     
     
@@ -67,7 +64,24 @@
 
     
     
-}
+    //NSString *entered=received;
+    //[_array insertObject:received atIndex:0];
+    //_array = [NSMutableArray copy];
+
+   // _array[1]=received;
+    //_array = [[NSArray alloc] initWithObjects:@"LOL", @"WE DAH HACKERZ", @"NO Sleep", @"HACKALLNITE", nil];
+    //_Subtext = [[NSArray alloc] initWithObjects:@"This is LOL", @"This is WEDAH", @"Fuck Sleep", @"Nite", nil];
+    
+    
+    
+    
+    
+    
+    ///////////
+
+    
+    
+//}
 /////////////
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
