@@ -1,8 +1,6 @@
 Slug Trails
 ======
 
-###""
-
 Link [here](http://challengepost.com/software/SlugTrails)!
 
 Slug Trails is an app for both iPhone and Android that uses the help from the community to
