@@ -97,7 +97,7 @@ class Location
 	}
 
 	public String toString(){
-		String ret = String.format("%d_%s_%d_%f_%f_%s\0", this.id, this.name, 
+		String ret = String.format("%d_%s_%d_%f_%f_%s", this.id, this.name, 
 			this.time, this.gps1, this.gps2, this.description);
 		return ret;
 	}
@@ -161,6 +161,9 @@ final class ServerRequest implements Runnable
 		if(result[0].equals("getall")){
 			commandState = 0;
 		}
+		else if(result[0].equals("getallm")){
+			commandState = 3;
+		}
 		else if(result[0].equals("update")){
 			commandState = 1;
 		}
@@ -175,7 +178,7 @@ final class ServerRequest implements Runnable
 
 		// Initialize output stream.
 		output = new PrintWriter(socket.getOutputStream());
-
+		Collection<Location> l;
 		switch(commandState){
 			// Getall command "getall_[GPS1]_[GPS2]_[RADIUS]"
 			case 0:
@@ -188,7 +191,7 @@ final class ServerRequest implements Runnable
 			radius = Float.parseFloat(result[3]);
 
 			System.out.printf("Sending data now:\n");
-			Collection<Location> l = ServerBackend.db.values();
+			l = ServerBackend.db.values();
 			//System.out.printf("HashtableSize:%d Size:%d IsEmpty:%b",ServerBackend.db.size(), l.size(), l.isEmpty());
 			for(Iterator<Location> i = l.iterator(); i.hasNext();){
 				String str = i.next().toString();
@@ -229,6 +232,28 @@ final class ServerRequest implements Runnable
 				Float.parseFloat(result[4]), Float.parseFloat(result[5]), result[6]);
 			ServerBackend.db.put(id, newLoc);
 			System.out.printf("Object Added to Database: %s\n", ServerBackend.db.get(id).toString());
+			break;
+
+			case 3:
+			if(result.length != 4){
+				this.socket.close();
+				throw new Exception("Invalid arguments.");
+			}
+			gpsLoc[0] = Float.parseFloat(result[1]);
+			gpsLoc[1] = Float.parseFloat(result[2]);
+			radius = Float.parseFloat(result[3]);
+
+			String str = "";
+			System.out.printf("Sending data now:\n");
+			l = ServerBackend.db.values();
+			//System.out.printf("HashtableSize:%d Size:%d IsEmpty:%b",ServerBackend.db.size(), l.size(), l.isEmpty());
+			for(Iterator<Location> i = l.iterator(); i.hasNext();){
+				str = str + "&" + i.next().toString();
+				System.out.printf("Value sent to client: %s\n", str);
+			}
+			System.out.println(str);
+			output.println(str);
+			output.flush();
 			break;
 		}
 
