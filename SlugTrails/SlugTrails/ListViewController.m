@@ -18,8 +18,8 @@
 
 @interface ListViewController ()
 /////////
-@property (strong, nonatomic) NSArray *array;
-@property (nonatomic, strong) NSArray *Subtext;
+@property (strong, nonatomic) NSMutableArray *array;
+@property (nonatomic, strong) NSMutableArray *Subtext;
 ////////
 @end
 
@@ -36,7 +36,7 @@
     [clients connect];
 
     
-    NSData *data = [@"getall_2.2_3.8_5.2\r" dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *data = [@"getallm_2.2_3.8_5.2\r" dataUsingEncoding:NSUTF8StringEncoding];
     
     long count = [clients sendBytes:[data bytes] count:[data length]];
     
@@ -53,9 +53,76 @@
     NSLog(@"%s", bytes);
     
     received = [[NSString alloc] initWithBytes:bytes length:strlen(bytes) encoding:NSUTF8StringEncoding];
-    //NSLog(@"%@",received);
+    NSLog(@"%@",received);
     
+    
+    
+    NSMutableArray *INPUT=[NSMutableArray array];
+    
+    //for(int i = 0; i < 10; i++) {
+        
+    [INPUT addObject:[NSString stringWithFormat: @"%@",received]];
+    //}
+    NSLog(@"myArray:\n%@", INPUT);
+    
+    
+    
+    
+    // The strings are divided into several different strings now
+    NSArray *fields = INPUT;
+    //}
+    fields = [received componentsSeparatedByString:@"&"];
+    
+    
+    //...do something useful with myArrayElement
+    //fins=[fields[i] componentsSeparatedByString:@"_"];
+    //_array=fins[i];
+    //name[i] = fins[1];
+    //desc[i] = fins[5];
+    
+    
+    
+    
+    
+    
+    
+    NSArray *fins;
+    NSMutableArray *title = [[NSMutableArray alloc] init];
+    NSMutableArray *sub = [[NSMutableArray alloc] init];
+    
+//      NSLog(@"%d",count);
+    
+    for (int i = 0; i < [fields count]; i++){
+        //...do something useful with myArrayElement
+        fins=[fields[i] componentsSeparatedByString:@"_"];
+        
+//        NSLog(@"%d",[fins count]);
+        for (int j=0; j<[fins count]; j++){
+            if(j==1) {
+                NSLog(fins[j]);
+                [title addObject: fins[j]];
+//                NSLog(@"++++++%d",_array);
+            }
+            else if(j==5){
+                [sub addObject:fins[j]];
+                
+            }
+        }
     }
+    
+    
+    
+    ///////////
+    _array = title;
+    _Subtext = sub;
+    
+    
+    //NSString *entered=received;
+    //[_array insertObject:received atIndex:0];
+    //_array = fields;
+    NSLog(@"%d",[_array count]);
+    
+}
     
     
     
@@ -64,9 +131,9 @@
 
     
     
-    //NSString *entered=received;
-    //[_array insertObject:received atIndex:0];
-    //_array = [NSMutableArray copy];
+//    NSString *entered=received;
+//    [_array insertObject:received atIndex:0];
+//    _array = [NSMutableArray copy];
 
    // _array[1]=received;
     //_array = [[NSArray alloc] initWithObjects:@"LOL", @"WE DAH HACKERZ", @"NO Sleep", @"HACKALLNITE", nil];
@@ -85,13 +152,16 @@
 /////////////
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.array count];
+//    NSLog(@"-------------------------------------------");
+    return [_array count];
 }
 
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+//    NSLog(@"SUSUSUSU");
+
     static NSString *cellID = @"cellID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (cell == nil)

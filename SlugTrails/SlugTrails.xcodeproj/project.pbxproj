@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8130AA81A625B3200280706 /* FastServerSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = B8130AA41A625B3200280706 /* FastServerSocket.m */; };
+		B8130AA91A625B3200280706 /* FastSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = B8130AA61A625B3200280706 /* FastSocket.m */; };
+		B8130AAA1A625B3200280706 /* FastSocket.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B8130AA71A625B3200280706 /* FastSocket.podspec */; };
+		B8130AAC1A625BF300280706 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B8130AAB1A625BF300280706 /* GoogleMaps.bundle */; };
+		B8130AAE1A625C0000280706 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8130AAD1A625C0000280706 /* GoogleMaps.framework */; };
 		F887020A1A60A84200ED3631 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F88702091A60A84200ED3631 /* main.m */; };
 		F887020D1A60A84200ED3631 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F887020C1A60A84200ED3631 /* AppDelegate.m */; };
 		F88702101A60A84200ED3631 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F887020F1A60A84200ED3631 /* ViewController.m */; };
 		F88702131A60A84200ED3631 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F88702111A60A84200ED3631 /* Main.storyboard */; };
 		F88702151A60A84200ED3631 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F88702141A60A84200ED3631 /* Images.xcassets */; };
 		F88702241A60A84300ED3631 /* SlugTrailsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F88702231A60A84300ED3631 /* SlugTrailsTests.m */; };
-		F88702321A60BC8600ED3631 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88702311A60BC8600ED3631 /* GoogleMaps.framework */; };
-		F88702381A60BD9300ED3631 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F88702371A60BD9300ED3631 /* GoogleMaps.bundle */; };
 		F887023A1A60BE1900ED3631 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88702391A60BE1900ED3631 /* AVFoundation.framework */; };
 		F88702451A60BE7C00ED3631 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F887023B1A60BE7B00ED3631 /* CoreData.framework */; };
 		F88702461A60BE7C00ED3631 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F887023C1A60BE7B00ED3631 /* CoreLocation.framework */; };
@@ -29,10 +32,6 @@
 		F88702501A60BE8E00ED3631 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F887024F1A60BE8E00ED3631 /* libicucore.dylib */; };
 		F88702551A60C1E700ED3631 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F88702541A60C1E700ED3631 /* MapViewController.m */; };
 		F88702581A60C20B00ED3631 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F88702571A60C20B00ED3631 /* ListViewController.m */; };
-		F88702671A60D37300ED3631 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F887025A1A60D37300ED3631 /* .gitignore */; };
-		F88702681A60D37300ED3631 /* FastServerSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F887025C1A60D37300ED3631 /* FastServerSocket.m */; };
-		F88702691A60D37300ED3631 /* FastSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F887025E1A60D37300ED3631 /* FastSocket.m */; };
-		F887026A1A60D37300ED3631 /* FastSocket.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F887025F1A60D37300ED3631 /* FastSocket.podspec */; };
 		F887027F1A61221A00ED3631 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F887027D1A61221A00ED3631 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B8130AA31A625B3200280706 /* FastServerSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FastServerSocket.h; path = "FastSocket-1.2 2/FastServerSocket.h"; sourceTree = SOURCE_ROOT; };
+		B8130AA41A625B3200280706 /* FastServerSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FastServerSocket.m; path = "FastSocket-1.2 2/FastServerSocket.m"; sourceTree = SOURCE_ROOT; };
+		B8130AA51A625B3200280706 /* FastSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FastSocket.h; path = "FastSocket-1.2 2/FastSocket.h"; sourceTree = SOURCE_ROOT; };
+		B8130AA61A625B3200280706 /* FastSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FastSocket.m; path = "FastSocket-1.2 2/FastSocket.m"; sourceTree = SOURCE_ROOT; };
+		B8130AA71A625B3200280706 /* FastSocket.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = FastSocket.podspec; path = "FastSocket-1.2 2/FastSocket.podspec"; sourceTree = SOURCE_ROOT; };
+		B8130AAB1A625BF300280706 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "GoogleMaps-iOS-1.9.1/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
+		B8130AAD1A625C0000280706 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = "GoogleMaps-iOS-1.9.1/GoogleMaps.framework"; sourceTree = "<group>"; };
 		F88702041A60A84200ED3631 /* SlugTrails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlugTrails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88702081A60A84200ED3631 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F88702091A60A84200ED3631 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -59,8 +65,6 @@
 		F887021D1A60A84300ED3631 /* SlugTrailsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlugTrailsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88702221A60A84300ED3631 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F88702231A60A84300ED3631 /* SlugTrailsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlugTrailsTests.m; sourceTree = "<group>"; };
-		F88702311A60BC8600ED3631 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = "../../../Downloads/GoogleMaps-iOS-1.9.1/GoogleMaps.framework"; sourceTree = "<group>"; };
-		F88702371A60BD9300ED3631 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "../../../Downloads/GoogleMaps-iOS-1.9.1/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
 		F88702391A60BE1900ED3631 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F887023B1A60BE7B00ED3631 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F887023C1A60BE7B00ED3631 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -77,12 +81,6 @@
 		F88702541A60C1E700ED3631 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ../MapViewController.m; sourceTree = "<group>"; };
 		F88702561A60C20B00ED3631 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		F88702571A60C20B00ED3631 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
-		F887025A1A60D37300ED3631 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		F887025B1A60D37300ED3631 /* FastServerSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastServerSocket.h; sourceTree = "<group>"; };
-		F887025C1A60D37300ED3631 /* FastServerSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastServerSocket.m; sourceTree = "<group>"; };
-		F887025D1A60D37300ED3631 /* FastSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastSocket.h; sourceTree = "<group>"; };
-		F887025E1A60D37300ED3631 /* FastSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastSocket.m; sourceTree = "<group>"; };
-		F887025F1A60D37300ED3631 /* FastSocket.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FastSocket.podspec; sourceTree = "<group>"; };
 		F887027E1A61221A00ED3631 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,11 +97,11 @@
 				F88702491A60BE7C00ED3631 /* ImageIO.framework in Frameworks */,
 				F887024A1A60BE7C00ED3631 /* libc++.dylib in Frameworks */,
 				F887024B1A60BE7C00ED3631 /* libz.dylib in Frameworks */,
+				B8130AAE1A625C0000280706 /* GoogleMaps.framework in Frameworks */,
 				F887024C1A60BE7C00ED3631 /* OpenGLES.framework in Frameworks */,
 				F887024D1A60BE7C00ED3631 /* QuartzCore.framework in Frameworks */,
 				F887024E1A60BE7C00ED3631 /* SystemConfiguration.framework in Frameworks */,
 				F887023A1A60BE1900ED3631 /* AVFoundation.framework in Frameworks */,
-				F88702321A60BC8600ED3631 /* GoogleMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +118,7 @@
 		F88701FB1A60A84100ED3631 = {
 			isa = PBXGroup;
 			children = (
+				B8130AAB1A625BF300280706 /* GoogleMaps.bundle */,
 				F88702591A60D37300ED3631 /* FastSocket-1.2 */,
 				F887024F1A60BE8E00ED3631 /* libicucore.dylib */,
 				F887023B1A60BE7B00ED3631 /* CoreData.framework */,
@@ -133,11 +132,10 @@
 				F88702431A60BE7C00ED3631 /* QuartzCore.framework */,
 				F88702441A60BE7C00ED3631 /* SystemConfiguration.framework */,
 				F88702391A60BE1900ED3631 /* AVFoundation.framework */,
-				F88702371A60BD9300ED3631 /* GoogleMaps.bundle */,
 				F88702061A60A84200ED3631 /* SlugTrails */,
 				F88702201A60A84300ED3631 /* SlugTrailsTests */,
 				F88702051A60A84200ED3631 /* Products */,
-				F88702311A60BC8600ED3631 /* GoogleMaps.framework */,
+				B8130AAD1A625C0000280706 /* GoogleMaps.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,12 +196,11 @@
 		F88702591A60D37300ED3631 /* FastSocket-1.2 */ = {
 			isa = PBXGroup;
 			children = (
-				F887025A1A60D37300ED3631 /* .gitignore */,
-				F887025B1A60D37300ED3631 /* FastServerSocket.h */,
-				F887025C1A60D37300ED3631 /* FastServerSocket.m */,
-				F887025D1A60D37300ED3631 /* FastSocket.h */,
-				F887025E1A60D37300ED3631 /* FastSocket.m */,
-				F887025F1A60D37300ED3631 /* FastSocket.podspec */,
+				B8130AA31A625B3200280706 /* FastServerSocket.h */,
+				B8130AA41A625B3200280706 /* FastServerSocket.m */,
+				B8130AA51A625B3200280706 /* FastSocket.h */,
+				B8130AA61A625B3200280706 /* FastSocket.m */,
+				B8130AA71A625B3200280706 /* FastSocket.podspec */,
 			);
 			name = "FastSocket-1.2";
 			path = "../../../Downloads/FastSocket-1.2";
@@ -289,12 +286,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F88702671A60D37300ED3631 /* .gitignore in Resources */,
+				B8130AAA1A625B3200280706 /* FastSocket.podspec in Resources */,
 				F88702131A60A84200ED3631 /* Main.storyboard in Resources */,
 				F88702151A60A84200ED3631 /* Images.xcassets in Resources */,
-				F88702381A60BD9300ED3631 /* GoogleMaps.bundle in Resources */,
+				B8130AAC1A625BF300280706 /* GoogleMaps.bundle in Resources */,
 				F887027F1A61221A00ED3631 /* LaunchScreen.xib in Resources */,
-				F887026A1A60D37300ED3631 /* FastSocket.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,8 +311,8 @@
 				F88702581A60C20B00ED3631 /* ListViewController.m in Sources */,
 				F88702101A60A84200ED3631 /* ViewController.m in Sources */,
 				F887020D1A60A84200ED3631 /* AppDelegate.m in Sources */,
-				F88702691A60D37300ED3631 /* FastSocket.m in Sources */,
-				F88702681A60D37300ED3631 /* FastServerSocket.m in Sources */,
+				B8130AA81A625B3200280706 /* FastServerSocket.m in Sources */,
+				B8130AA91A625B3200280706 /* FastSocket.m in Sources */,
 				F887020A1A60A84200ED3631 /* main.m in Sources */,
 				F88702551A60C1E700ED3631 /* MapViewController.m in Sources */,
 			);
@@ -447,6 +443,7 @@
 					"$(inherited)",
 					"/Users/ilaforces1/Documents/GoogleMaps-iOS-1.9.1",
 					"/Users/ilaforces1/Downloads/GoogleMaps-iOS-1.9.1",
+					"$(PROJECT_DIR)/GoogleMaps-iOS-1.9.1",
 				);
 				INFOPLIST_FILE = SlugTrails/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -464,6 +461,7 @@
 					"$(inherited)",
 					"/Users/ilaforces1/Documents/GoogleMaps-iOS-1.9.1",
 					"/Users/ilaforces1/Downloads/GoogleMaps-iOS-1.9.1",
+					"$(PROJECT_DIR)/GoogleMaps-iOS-1.9.1",
 				);
 				INFOPLIST_FILE = SlugTrails/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

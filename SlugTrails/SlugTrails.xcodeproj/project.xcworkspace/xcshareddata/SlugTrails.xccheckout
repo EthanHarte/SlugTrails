@@ -6,19 +6,15 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>D9C0D756-E570-4C77-ACDE-46FE2FD8B282</string>
-	<key>IDESourceControlProjectName</key>
-	<string>SlugTrails</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>3D620FDBF907ECD83DADFCC756913263534A4554</key>
 		<string>http://github.com/EthanHarte/SlugTrails.git</string>
 	</dict>
-	<key>IDESourceControlProjectPath</key>
-	<string>SlugTrails/SlugTrails.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>3D620FDBF907ECD83DADFCC756913263534A4554</key>
-		<string>../../..</string>
+		<string>SlugTrails/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>http://github.com/EthanHarte/SlugTrails.git</string>

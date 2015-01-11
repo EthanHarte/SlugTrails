@@ -18,7 +18,8 @@
 #import <GoogleMaps/GoogleMaps.h>
 
 @interface MapViewController ()
-
+//@property (strong, nonatomic) NSMutableArray *array;
+//@property (nonatomic, strong) NSMutableArray *Subtext;
 @end
 
 @implementation MapViewController 
@@ -56,6 +57,60 @@
     marker.title = @"Sydney";
     marker.snippet = @"Australia";
     marker.map = mapView_;
+    
+//    
+//    NSData *data = [@"getallm_2.2_3.8_5.2\r" dataUsingEncoding:NSUTF8StringEncoding];
+//    
+//    long count = [clients sendBytes:[data bytes] count:[data length]];
+//    
+//    long expectedLength=64000;
+//    
+//    
+//    NSString *received=@"";
+//    char bytes[expectedLength];
+//    //while (![received isEqual:NULL]) {
+//    
+//    received = @"";
+//    [clients receiveBytes:bytes limit:expectedLength];
+//    //[clients buffer:bytes size:expectedLength];
+//    NSLog(@"%s", bytes);
+//    
+//    received = [[NSString alloc] initWithBytes:bytes length:strlen(bytes) encoding:NSUTF8StringEncoding];
+//    NSLog(@"%@",received);
+//    
+//    
+//    
+//    NSMutableArray *INPUT=[NSMutableArray array];
+//    [INPUT addObject:[NSString stringWithFormat: @"%@",received]];
+//    NSLog(@"myArray:\n%@", INPUT);
+//    
+//    // The strings are divided into several different strings now
+//    NSArray *fields = INPUT;
+//    fields = [received componentsSeparatedByString:@"&"];
+//    
+//    NSArray *fins;
+//    NSMutableArray *title = [[NSMutableArray alloc] init];
+//    NSMutableArray *sub = [[NSMutableArray alloc] init];
+//    
+//    for (int i = 0; i < [fields count]; i++){
+//        //...do something useful with myArrayElement
+//        fins=[fields[i] componentsSeparatedByString:@"_"];
+//        for (int j=0; j<[fins count]; j++){
+//            if(j==1) {
+//                NSLog(fins[j]);
+//                [title addObject: fins[j]];
+//            }
+//            else if(j==5){
+//                [sub addObject:fins[j]];
+//            }
+//        }
+//    }
+//    _array = title;
+//    _Subtext = sub;
+//
+    
+    
+    
     
 //    locManager_ = [[CLLocationManager alloc] init];
 //    locManager_.delegate = self;
