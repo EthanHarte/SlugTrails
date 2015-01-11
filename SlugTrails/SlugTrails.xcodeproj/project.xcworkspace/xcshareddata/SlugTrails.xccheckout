@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D9C0D756-E570-4C77-ACDE-46FE2FD8B282</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3D620FDBF907ECD83DADFCC756913263534A4554</key>
+		<string>http://github.com/EthanHarte/SlugTrails.git</string>
+	</dict>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3D620FDBF907ECD83DADFCC756913263534A4554</key>
+		<string>SlugTrails/</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://github.com/EthanHarte/SlugTrails.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3D620FDBF907ECD83DADFCC756913263534A4554</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3D620FDBF907ECD83DADFCC756913263534A4554</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SlugTrails</string>
+		</dict>
+	</array>
+</dict>
+</plist>

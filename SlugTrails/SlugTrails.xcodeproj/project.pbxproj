@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F887020A1A60A84200ED3631 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F88702091A60A84200ED3631 /* main.m */; };
+		F887020D1A60A84200ED3631 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F887020C1A60A84200ED3631 /* AppDelegate.m */; };
+		F88702101A60A84200ED3631 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F887020F1A60A84200ED3631 /* ViewController.m */; };
+		F88702131A60A84200ED3631 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F88702111A60A84200ED3631 /* Main.storyboard */; };
+		F88702151A60A84200ED3631 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F88702141A60A84200ED3631 /* Images.xcassets */; };
+		F88702241A60A84300ED3631 /* SlugTrailsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F88702231A60A84300ED3631 /* SlugTrailsTests.m */; };
+		F88702321A60BC8600ED3631 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88702311A60BC8600ED3631 /* GoogleMaps.framework */; };
+		F88702381A60BD9300ED3631 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F88702371A60BD9300ED3631 /* GoogleMaps.bundle */; };
+		F887023A1A60BE1900ED3631 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88702391A60BE1900ED3631 /* AVFoundation.framework */; };
+		F88702451A60BE7C00ED3631 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F887023B1A60BE7B00ED3631 /* CoreData.framework */; };
+		F88702461A60BE7C00ED3631 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F887023C1A60BE7B00ED3631 /* CoreLocation.framework */; };
+		F88702471A60BE7C00ED3631 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F887023D1A60BE7B00ED3631 /* CoreText.framework */; };
+		F88702481A60BE7C00ED3631 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F887023E1A60BE7B00ED3631 /* GLKit.framework */; };
+		F88702491A60BE7C00ED3631 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F887023F1A60BE7B00ED3631 /* ImageIO.framework */; };
+		F887024A1A60BE7C00ED3631 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F88702401A60BE7B00ED3631 /* libc++.dylib */; };
+		F887024B1A60BE7C00ED3631 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F88702411A60BE7C00ED3631 /* libz.dylib */; };
+		F887024C1A60BE7C00ED3631 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88702421A60BE7C00ED3631 /* OpenGLES.framework */; };
+		F887024D1A60BE7C00ED3631 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88702431A60BE7C00ED3631 /* QuartzCore.framework */; };
+		F887024E1A60BE7C00ED3631 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88702441A60BE7C00ED3631 /* SystemConfiguration.framework */; };
+		F88702501A60BE8E00ED3631 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F887024F1A60BE8E00ED3631 /* libicucore.dylib */; };
+		F88702551A60C1E700ED3631 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F88702541A60C1E700ED3631 /* MapViewController.m */; };
+		F88702581A60C20B00ED3631 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F88702571A60C20B00ED3631 /* ListViewController.m */; };
+		F88702671A60D37300ED3631 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F887025A1A60D37300ED3631 /* .gitignore */; };
+		F88702681A60D37300ED3631 /* FastServerSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F887025C1A60D37300ED3631 /* FastServerSocket.m */; };
+		F88702691A60D37300ED3631 /* FastSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F887025E1A60D37300ED3631 /* FastSocket.m */; };
+		F887026A1A60D37300ED3631 /* FastSocket.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F887025F1A60D37300ED3631 /* FastSocket.podspec */; };
+		F887027F1A61221A00ED3631 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F887027D1A61221A00ED3631 /* LaunchScreen.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F887021E1A60A84300ED3631 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F88701FC1A60A84100ED3631 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F88702031A60A84200ED3631;
+			remoteInfo = SlugTrails;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F88702041A60A84200ED3631 /* SlugTrails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlugTrails.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F88702081A60A84200ED3631 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F88702091A60A84200ED3631 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F887020B1A60A84200ED3631 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F887020C1A60A84200ED3631 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F887020E1A60A84200ED3631 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F887020F1A60A84200ED3631 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F88702121A60A84200ED3631 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F88702141A60A84200ED3631 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F887021D1A60A84300ED3631 /* SlugTrailsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlugTrailsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F88702221A60A84300ED3631 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F88702231A60A84300ED3631 /* SlugTrailsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlugTrailsTests.m; sourceTree = "<group>"; };
+		F88702311A60BC8600ED3631 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = "../../../Downloads/GoogleMaps-iOS-1.9.1/GoogleMaps.framework"; sourceTree = "<group>"; };
+		F88702371A60BD9300ED3631 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "../../../Downloads/GoogleMaps-iOS-1.9.1/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
+		F88702391A60BE1900ED3631 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F887023B1A60BE7B00ED3631 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F887023C1A60BE7B00ED3631 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F887023D1A60BE7B00ED3631 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		F887023E1A60BE7B00ED3631 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		F887023F1A60BE7B00ED3631 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		F88702401A60BE7B00ED3631 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		F88702411A60BE7C00ED3631 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F88702421A60BE7C00ED3631 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		F88702431A60BE7C00ED3631 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F88702441A60BE7C00ED3631 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F887024F1A60BE8E00ED3631 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		F88702531A60C1E700ED3631 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
+		F88702541A60C1E700ED3631 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ../MapViewController.m; sourceTree = "<group>"; };
+		F88702561A60C20B00ED3631 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		F88702571A60C20B00ED3631 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		F887025A1A60D37300ED3631 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F887025B1A60D37300ED3631 /* FastServerSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastServerSocket.h; sourceTree = "<group>"; };
+		F887025C1A60D37300ED3631 /* FastServerSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastServerSocket.m; sourceTree = "<group>"; };
+		F887025D1A60D37300ED3631 /* FastSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastSocket.h; sourceTree = "<group>"; };
+		F887025E1A60D37300ED3631 /* FastSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastSocket.m; sourceTree = "<group>"; };
+		F887025F1A60D37300ED3631 /* FastSocket.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FastSocket.podspec; sourceTree = "<group>"; };
+		F887027E1A61221A00ED3631 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F88702011A60A84200ED3631 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F88702501A60BE8E00ED3631 /* libicucore.dylib in Frameworks */,
+				F88702451A60BE7C00ED3631 /* CoreData.framework in Frameworks */,
+				F88702461A60BE7C00ED3631 /* CoreLocation.framework in Frameworks */,
+				F88702471A60BE7C00ED3631 /* CoreText.framework in Frameworks */,
+				F88702481A60BE7C00ED3631 /* GLKit.framework in Frameworks */,
+				F88702491A60BE7C00ED3631 /* ImageIO.framework in Frameworks */,
+				F887024A1A60BE7C00ED3631 /* libc++.dylib in Frameworks */,
+				F887024B1A60BE7C00ED3631 /* libz.dylib in Frameworks */,
+				F887024C1A60BE7C00ED3631 /* OpenGLES.framework in Frameworks */,
+				F887024D1A60BE7C00ED3631 /* QuartzCore.framework in Frameworks */,
+				F887024E1A60BE7C00ED3631 /* SystemConfiguration.framework in Frameworks */,
+				F887023A1A60BE1900ED3631 /* AVFoundation.framework in Frameworks */,
+				F88702321A60BC8600ED3631 /* GoogleMaps.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F887021A1A60A84300ED3631 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F88701FB1A60A84100ED3631 = {
+			isa = PBXGroup;
+			children = (
+				F88702591A60D37300ED3631 /* FastSocket-1.2 */,
+				F887024F1A60BE8E00ED3631 /* libicucore.dylib */,
+				F887023B1A60BE7B00ED3631 /* CoreData.framework */,
+				F887023C1A60BE7B00ED3631 /* CoreLocation.framework */,
+				F887023D1A60BE7B00ED3631 /* CoreText.framework */,
+				F887023E1A60BE7B00ED3631 /* GLKit.framework */,
+				F887023F1A60BE7B00ED3631 /* ImageIO.framework */,
+				F88702401A60BE7B00ED3631 /* libc++.dylib */,
+				F88702411A60BE7C00ED3631 /* libz.dylib */,
+				F88702421A60BE7C00ED3631 /* OpenGLES.framework */,
+				F88702431A60BE7C00ED3631 /* QuartzCore.framework */,
+				F88702441A60BE7C00ED3631 /* SystemConfiguration.framework */,
+				F88702391A60BE1900ED3631 /* AVFoundation.framework */,
+				F88702371A60BD9300ED3631 /* GoogleMaps.bundle */,
+				F88702061A60A84200ED3631 /* SlugTrails */,
+				F88702201A60A84300ED3631 /* SlugTrailsTests */,
+				F88702051A60A84200ED3631 /* Products */,
+				F88702311A60BC8600ED3631 /* GoogleMaps.framework */,
+			);
+			sourceTree = "<group>";
+		};
+		F88702051A60A84200ED3631 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F88702041A60A84200ED3631 /* SlugTrails.app */,
+				F887021D1A60A84300ED3631 /* SlugTrailsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F88702061A60A84200ED3631 /* SlugTrails */ = {
+			isa = PBXGroup;
+			children = (
+				F887020B1A60A84200ED3631 /* AppDelegate.h */,
+				F887020C1A60A84200ED3631 /* AppDelegate.m */,
+				F887020E1A60A84200ED3631 /* ViewController.h */,
+				F887020F1A60A84200ED3631 /* ViewController.m */,
+				F88702531A60C1E700ED3631 /* MapViewController.h */,
+				F88702541A60C1E700ED3631 /* MapViewController.m */,
+				F88702561A60C20B00ED3631 /* ListViewController.h */,
+				F88702571A60C20B00ED3631 /* ListViewController.m */,
+				F88702111A60A84200ED3631 /* Main.storyboard */,
+				F887027D1A61221A00ED3631 /* LaunchScreen.xib */,
+				F88702141A60A84200ED3631 /* Images.xcassets */,
+				F88702071A60A84200ED3631 /* Supporting Files */,
+			);
+			path = SlugTrails;
+			sourceTree = "<group>";
+		};
+		F88702071A60A84200ED3631 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F88702081A60A84200ED3631 /* Info.plist */,
+				F88702091A60A84200ED3631 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F88702201A60A84300ED3631 /* SlugTrailsTests */ = {
+			isa = PBXGroup;
+			children = (
+				F88702231A60A84300ED3631 /* SlugTrailsTests.m */,
+				F88702211A60A84300ED3631 /* Supporting Files */,
+			);
+			path = SlugTrailsTests;
+			sourceTree = "<group>";
+		};
+		F88702211A60A84300ED3631 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F88702221A60A84300ED3631 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F88702591A60D37300ED3631 /* FastSocket-1.2 */ = {
+			isa = PBXGroup;
+			children = (
+				F887025A1A60D37300ED3631 /* .gitignore */,
+				F887025B1A60D37300ED3631 /* FastServerSocket.h */,
+				F887025C1A60D37300ED3631 /* FastServerSocket.m */,
+				F887025D1A60D37300ED3631 /* FastSocket.h */,
+				F887025E1A60D37300ED3631 /* FastSocket.m */,
+				F887025F1A60D37300ED3631 /* FastSocket.podspec */,
+			);
+			name = "FastSocket-1.2";
+			path = "../../../Downloads/FastSocket-1.2";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F88702031A60A84200ED3631 /* SlugTrails */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F88702271A60A84300ED3631 /* Build configuration list for PBXNativeTarget "SlugTrails" */;
+			buildPhases = (
+				F88702001A60A84200ED3631 /* Sources */,
+				F88702011A60A84200ED3631 /* Frameworks */,
+				F88702021A60A84200ED3631 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlugTrails;
+			productName = SlugTrails;
+			productReference = F88702041A60A84200ED3631 /* SlugTrails.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F887021C1A60A84300ED3631 /* SlugTrailsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F887022A1A60A84300ED3631 /* Build configuration list for PBXNativeTarget "SlugTrailsTests" */;
+			buildPhases = (
+				F88702191A60A84300ED3631 /* Sources */,
+				F887021A1A60A84300ED3631 /* Frameworks */,
+				F887021B1A60A84300ED3631 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F887021F1A60A84300ED3631 /* PBXTargetDependency */,
+			);
+			name = SlugTrailsTests;
+			productName = SlugTrailsTests;
+			productReference = F887021D1A60A84300ED3631 /* SlugTrailsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F88701FC1A60A84100ED3631 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Andrew Lee";
+				TargetAttributes = {
+					F88702031A60A84200ED3631 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					F887021C1A60A84300ED3631 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = F88702031A60A84200ED3631;
+					};
+				};
+			};
+			buildConfigurationList = F88701FF1A60A84200ED3631 /* Build configuration list for PBXProject "SlugTrails" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F88701FB1A60A84100ED3631;
+			productRefGroup = F88702051A60A84200ED3631 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F88702031A60A84200ED3631 /* SlugTrails */,
+				F887021C1A60A84300ED3631 /* SlugTrailsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F88702021A60A84200ED3631 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F88702671A60D37300ED3631 /* .gitignore in Resources */,
+				F88702131A60A84200ED3631 /* Main.storyboard in Resources */,
+				F88702151A60A84200ED3631 /* Images.xcassets in Resources */,
+				F88702381A60BD9300ED3631 /* GoogleMaps.bundle in Resources */,
+				F887027F1A61221A00ED3631 /* LaunchScreen.xib in Resources */,
+				F887026A1A60D37300ED3631 /* FastSocket.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F887021B1A60A84300ED3631 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F88702001A60A84200ED3631 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F88702581A60C20B00ED3631 /* ListViewController.m in Sources */,
+				F88702101A60A84200ED3631 /* ViewController.m in Sources */,
+				F887020D1A60A84200ED3631 /* AppDelegate.m in Sources */,
+				F88702691A60D37300ED3631 /* FastSocket.m in Sources */,
+				F88702681A60D37300ED3631 /* FastServerSocket.m in Sources */,
+				F887020A1A60A84200ED3631 /* main.m in Sources */,
+				F88702551A60C1E700ED3631 /* MapViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F88702191A60A84300ED3631 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F88702241A60A84300ED3631 /* SlugTrailsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F887021F1A60A84300ED3631 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F88702031A60A84200ED3631 /* SlugTrails */;
+			targetProxy = F887021E1A60A84300ED3631 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F88702111A60A84200ED3631 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F88702121A60A84200ED3631 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F887027D1A61221A00ED3631 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F887027E1A61221A00ED3631 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F88702251A60A84300ED3631 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F88702261A60A84300ED3631 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F88702281A60A84300ED3631 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ilaforces1/Documents/GoogleMaps-iOS-1.9.1",
+					"/Users/ilaforces1/Downloads/GoogleMaps-iOS-1.9.1",
+				);
+				INFOPLIST_FILE = SlugTrails/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F88702291A60A84300ED3631 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ilaforces1/Documents/GoogleMaps-iOS-1.9.1",
+					"/Users/ilaforces1/Downloads/GoogleMaps-iOS-1.9.1",
+				);
+				INFOPLIST_FILE = SlugTrails/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F887022B1A60A84300ED3631 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SlugTrailsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlugTrails.app/SlugTrails";
+			};
+			name = Debug;
+		};
+		F887022C1A60A84300ED3631 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SlugTrailsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlugTrails.app/SlugTrails";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F88701FF1A60A84200ED3631 /* Build configuration list for PBXProject "SlugTrails" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F88702251A60A84300ED3631 /* Debug */,
+				F88702261A60A84300ED3631 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F88702271A60A84300ED3631 /* Build configuration list for PBXNativeTarget "SlugTrails" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F88702281A60A84300ED3631 /* Debug */,
+				F88702291A60A84300ED3631 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F887022A1A60A84300ED3631 /* Build configuration list for PBXNativeTarget "SlugTrailsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F887022B1A60A84300ED3631 /* Debug */,
+				F887022C1A60A84300ED3631 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F88701FC1A60A84100ED3631 /* Project object */;
+}
